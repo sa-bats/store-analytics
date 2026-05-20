@@ -54,7 +54,8 @@ h1 {
   margin-bottom: 4px;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
   width: 100%;
   padding: 8px 0;
   border: none;
@@ -63,9 +64,11 @@ h1 {
   font-size: 0.95rem;
   outline: none;
   background: transparent;
+  cursor: pointer;
 }
 
-.form-group input:focus {
+.form-group input:focus,
+.form-group select:focus {
   border-bottom-color: #111;
 }
 
