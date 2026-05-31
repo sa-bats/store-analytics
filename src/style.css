@@ -134,14 +134,15 @@ button[type="submit"]:hover {
 #products-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1px;
-  border: 1px solid #ddd;
-  background: #ddd;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
 .product-card {
   background: #fff;
   padding: 20px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .product-card h3 {
