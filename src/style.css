@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: #ffffff;
+  color: #111;
+  padding: 40px 24px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 2px solid #111;
+  padding-bottom: 12px;
+  margin-bottom: 32px;
+}
+
+/* Form */
+.form-section {
+  border: 1px solid #ddd;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.form-section h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-bottom-color: #111;
+}
+
+.form-group input.error {
+  border-bottom-color: #f59e0b;
+}
+
+button[type="submit"] {
+  margin-top: 16px;
+  padding: 10px 24px;
+  background: #111;
+  color: #fff;
+  border: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #333;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+  align-items: flex-end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-group label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 6px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  background: transparent;
+  min-width: 200px;
+}
+
+.filter-group select {
+  cursor: pointer;
+}
+
+/* Product cards */
+#products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.product-card {
+  background: #fff;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.product-card .sku {
+  font-size: 0.72rem;
+  color: #aaa;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+
+.product-card .category {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.product-card .price {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.product-card .price .original {
+  text-decoration: line-through;
+  color: #aaa;
+  font-weight: 400;
+  font-size: 0.85rem;
+  margin-right: 6px;
+}
+
+.product-card .price .discounted {
+  color: #f59e0b;
+}
+
+.product-card .available {
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.product-card .status {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  border: 1px solid;
+}
+
+.status-IN_STOCK { color: #15803d; border-color: #15803d; }
+.status-LOW      { color: #b45309; border-color: #b45309; }
+.status-OUT      { color: #b91c1c; border-color: #b91c1c; }
+
+.product-card .rating {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.product-card .specs {
+  font-size: 0.75rem;
+  color: #999;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 8px;
+  margin-top: 4px;
+  line-height: 1.6;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store Analytics</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Store Analytics</h1>
+
+      <section class="form-section">
+        <h2>Add Product</h2>
+        <form id="product-form">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" placeholder="e.g., Sony WH-1000XM5" />
+          </div>
+          <div class="form-group">
+            <label for="category">Category *</label>
+            <input type="text" id="category" placeholder="e.g., Electronics" />
+          </div>
+          <div class="form-group">
+            <label for="supplierId">Supplier *</label>
+            <select id="supplierId"></select>
+          </div>
+          <div class="form-group">
+            <label for="price">Price *</label>
+            <input type="number" id="price" min="0" step="0.01" />
+          </div>
+          <div class="form-group">
+            <label for="quantities">Warehouse Quantities (comma-separated) *</label>
+            <input type="text" id="quantities" placeholder="e.g., 5, 3, 2" />
+          </div>
+          <div class="form-group">
+            <label for="specs">Specifications (key=value, key=value)</label>
+            <input type="text" id="specs" placeholder="e.g., processor=Intel i7, ram=16GB" />
+          </div>
+          <button type="submit">Add Product</button>
+        </form>
+      </section>
+
+      <section class="controls">
+        <div class="filter-group">
+          <label for="filter">Filter by name:</label>
+          <input type="text" id="filter" placeholder="Search products..." />
+        </div>
+        <div class="filter-group">
+          <label for="sort">Sort by:</label>
+          <select id="sort">
+            <option value="name">Name</option>
+            <option value="price">Price</option>
+            <option value="available">Available</option>
+            <option value="rating">Rating</option>
+          </select>
+        </div>
+      </section>
+
+      <div id="products-container"></div>
+    </div>
+
+    <script type="module" src="/src/task2.ts"></script>
+  </body>
+</html>
